@@ -53,30 +53,6 @@
       </div>
     </div>
 
-    <!-- <div class="container-fluid project-gallery">
-        <div class="container">
-            <div id='ProjectGallery' class="splide">
-              <div class="splide__arrows">
-                <div class="splide__arrow splide__arrow--prev">
-                  <i class="fas fa-caret-left medium-caret"></i>
-                </div>
-                <div class="splide__arrow splide__arrow--next">
-                  <i class="fas fa-caret-right medium-caret"></i>
-                </div>
-              </div>
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide"><img src="/public/img/logo-resimp.png" class="img-responsive" /></li>
-                  <li class="splide__slide"><img src="/public/img/logo-rcn.png" class="img-responsive"/></li>
-                  <li class="splide__slide"><img src="/public/img/logo-mjp.png" class="img-responsive"/></li>
-                  <li class="splide__slide"><img src="/public/img/logo-myfoodstand.png" class="img-responsive"/></li>
-                  <li class="splide__slide"><img src="/public/img/logo-mti.png" class="img-responsive"/></li>
-                </ul>
-              </div>
-            </div>
-        </div>
-      </div> -->
-
     <div class="container-fluid credits">
       <div class="container">
         <div class="row">
@@ -115,10 +91,7 @@ export default Vue.extend({
     return {
       splideOptions,
     };
-  },
-  mounted() {
-    this.$modal.show("example");
-  },
+  }
 });
 </script>
 
@@ -151,20 +124,6 @@ body {
 
 .splide__arrow {
   background: none;
-}
-
-@media (min-width: 768px) {
-  .modal-dialog {
-    width: 85%;
-  }
-}
-
-.modal-body {
-  padding: 0;
-}
-
-.modal-content {
-  border: 5px solid #ffff09;
 }
 
 /* .software {
@@ -205,55 +164,4 @@ body {
   height: 120px;
 }
 
-.project-modal {
-  position: relative;
-}
-
-.project-modal .close-btn {
-  position: absolute;
-  right: 8px;
-  top: 5px;
-  cursor: pointer;
-  z-index: 100;
-}
-
-@media (min-width: 768px) {
-  .project-modal .close-btn {
-    display: none;
-  }
-}
-
-.project-modal .close-btn i {
-  color: #ffff09;
-  font-size: 24px;
-}
-
-.asset-gallery {
-  background-color: #120f0f;
-}
-
-/* smartphones, touchscreens */
-@media (hover: none) and (pointer: coarse) {
-  .splide__arrow {
-    display: none;
-  }
-}
-
-.asset-gallery li {
-  padding: 50px 25px;
-}
-
-/* I'm going to have to target these to screen shot styles */
-.asset-gallery img {
-  max-width: 80vw;
-  width: 700px;
-}
-
-.project-details {
-  padding: 30px;
-}
-
-.project-details h1 {
-  text-align: center;
-}
 </style>

@@ -41,13 +41,19 @@
             </div>
           </template>
           <splide-slide>
-            <img src="../assets/logo-rcn.png" />
+            <img src="../assets/logo-resimp.png" />
           </splide-slide>
           <splide-slide>
             <img src="../assets/logo-rcn.png" />
           </splide-slide>
           <splide-slide>
-            <img src="../assets/logo-rcn.png" />
+            <img src="../assets/logo-mjp.png" />
+          </splide-slide>
+          <splide-slide>
+            <img src="../assets/logo-myfoodstand.png" />
+          </splide-slide>
+          <splide-slide>
+            <img src="../assets/logo-mti.png" />
           </splide-slide>
         </splide>
       </div>

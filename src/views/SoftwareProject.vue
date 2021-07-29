@@ -4,7 +4,7 @@
       <i class="fas fa-times" onclick="closeModal()"></i>
     </div>
     <div class="asset-gallery">
-      <splide :options="splideOptions">
+      <splide :options="splideOptions" :slides="project.images">
         <template v-slot:controls>
           <div class="splide__arrows">
             <div class="splide__arrow splide__arrow--prev">
@@ -15,21 +15,15 @@
             </div>
           </div>
         </template>
-        <splide-slide>
-          <img src="../assets/resimp-search-1.png" />
-        </splide-slide>
-        <splide-slide>
-          <img src="../assets/resimp-search-1.png" />
-        </splide-slide>
-        <splide-slide>
-          <img src="../assets/resimp-search-1.png" />
+        <splide-slide v-for="image in project.images" :key="image">
+          <img :src="getImgURL(image)" v-bind:alt="image" />
         </splide-slide>
       </splide>
     </div>
     <div class="project-details">
       <div class="container-fluid">
         <div class="row">
-          <h1>Resimplifi</h1>
+          <h1>{{ project.name }}</h1>
         </div>
         <div class="row">
           <div class="text">
@@ -52,10 +46,20 @@
 </template>
 
 <script>
-
 import Vue from "vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
+let projects = {
+  resimplifi: {
+    name: "Resimplifi",
+    images: [
+      "resimp-search-1.png",
+      "resimp-search-2.png",
+      "resimp-search-3.png",
+    ],
+  },
+};
 
 let splideOptions = {
   type: "loop",
@@ -70,15 +74,28 @@ let splideOptions = {
 };
 
 export default Vue.extend({
-  name: "Software",
+  name: "SoftwareProject",
+  props: {
+    name: { type: String },
+  },
   components: { Splide, SplideSlide },
   data() {
     return {
       splideOptions,
     };
+  },
+  computed: {
+    project: function () {
+      let name = this.name;
+      return projects[name];
+    },
+  },
+  methods: {
+    getImgURL: function (pic) {
+        return require('../assets/'+pic)
+    }
   }
 });
-
 </script>
 
 <style scoped>
@@ -173,3 +190,4 @@ body {
   text-align: center;
 }
 </style>
+

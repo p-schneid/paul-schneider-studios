@@ -1,7 +1,7 @@
 <template>
     
     <div class="portfolio">
-
+      <Navigation />
       <div class="container ">
         <div class="row">
           <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
@@ -188,6 +188,16 @@
     </div>
 
 </template>
+
+<script> 
+import Vue from "vue";
+import Navigation from "@/components/Navigation.vue";
+
+export default Vue.extend({
+  name: "Design",
+  components: { Navigation }
+});
+</script>
 
 <style scoped>
 

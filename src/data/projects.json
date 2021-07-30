@@ -1,0 +1,32 @@
+[
+    {
+        "id": "resimplifi",
+        "name": "Resimplifi",
+        "logo": "logo-resimp.png",
+        "images": [
+            "resimp-search-1.png",
+            "resimp-search-2.png",
+            "resimp-search-3.png"
+        ]
+    },
+    {
+        "id": "ncr",
+        "name": "NCR",
+        "logo": "logo-rcn.png"
+    },
+    {
+        "id": "pjm",
+        "name": "PJM",
+        "logo": "logo-mjp.png"
+    },
+    {
+        "id": "myfoodstand",
+        "name": "My Food Stand",
+        "logo": "logo-myfoodstand.png"
+    },
+    {
+        "id": "itm",
+        "name": "ITM Twentyfirst",
+        "logo": "logo-mti.png"
+    }
+]

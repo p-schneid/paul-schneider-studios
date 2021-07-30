@@ -1,6 +1,7 @@
 
 <template>
   <div class="software">
+    <Navigation />
     <div class="container-fluid intro">
       <div class="container">
         <div class="row title">
@@ -29,7 +30,7 @@
 
     <div class="container-fluid project-gallery">
       <div class="container">
-        <splide :options="splideOptions">
+        <splide :options="splideOptions" :slides="projects">
           <template v-slot:controls>
             <div class="splide__arrows">
               <div class="splide__arrow splide__arrow--prev">
@@ -40,20 +41,8 @@
               </div>
             </div>
           </template>
-          <splide-slide>
-            <img src="../assets/logo-resimp.png" />
-          </splide-slide>
-          <splide-slide>
-            <img src="../assets/logo-rcn.png" />
-          </splide-slide>
-          <splide-slide>
-            <img src="../assets/logo-mjp.png" />
-          </splide-slide>
-          <splide-slide>
-            <img src="../assets/logo-myfoodstand.png" />
-          </splide-slide>
-          <splide-slide>
-            <img src="../assets/logo-mti.png" />
+          <splide-slide v-for="project in projects" :key="project.name">
+            <img :src="getImgURL(project.logo)" v-bind:alt="project.logo" @click="showProject(project.id)" />
           </splide-slide>
         </splide>
       </div>
@@ -75,8 +64,10 @@
 
 <script>
 import Vue from "vue";
+import Navigation from "../components/Navigation.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import projects from "../data/projects.json";
 
 let splideOptions = {
   type: "loop",
@@ -92,12 +83,21 @@ let splideOptions = {
 
 export default Vue.extend({
   name: "Software",
-  components: { Splide, SplideSlide },
+  components: { Splide, SplideSlide, Navigation },
   data() {
     return {
       splideOptions,
+      projects,
     };
-  }
+  },
+  methods: {
+    getImgURL: function (pic) {
+      return require("../assets/" + pic);
+    },
+    showProject: function (projectID) {
+      this.$router.push("/software-project/" + projectID);
+    }
+  },
 });
 </script>
 
@@ -168,6 +168,7 @@ body {
 
 .project-gallery img {
   height: 120px;
+  cursor: pointer;
 }
 
 </style>

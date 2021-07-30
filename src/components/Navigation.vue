@@ -20,6 +20,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><router-link to="/software">Software</router-link></li>
             <li><router-link to="/design">Graphic Design</router-link></li>
+            <li><router-link to="/vr">VR + AR</router-link></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

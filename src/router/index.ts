@@ -1,21 +1,19 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
+import Software from "../views/Software.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Software",
+    component: Software,
   },
   {
     path: "/software",
     name: "Software",
-    // route level code-splitting
-    component: () =>
-      import(/* webpackChunkName: "software" */ "../views/Software.vue"),
+    component: Software
   },
   {
     path: "/software-project/:id",
@@ -33,14 +31,12 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "design" */ "../views/Design.vue"),
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/vr",
+    name: "VR and AR",
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
+      import(/* webpackChunkName: "design" */ "../views/VR.vue"),
+  }
 ];
 
 const router = new VueRouter({

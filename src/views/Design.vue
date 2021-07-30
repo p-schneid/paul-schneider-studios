@@ -221,19 +221,11 @@ export default Vue.extend({
 .portfolio {
     font-family: sans-serif;
     color: #312f2f;
-    font-size: 14px;
     background: url("../assets/navy-cloth.jpg");
 }
 
 .portfolio .row {
     margin-top: 30px;
-}
-
-/* Desktop */
-@media (min-width : 768px) {
-    .portfolio {
-        font-size: 16px;
-    }
 }
 
 .portfolio h1, .portfolio h2 {

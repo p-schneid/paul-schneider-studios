@@ -9,20 +9,8 @@
           <i class="fas fa-chevron-left large-caret"></i>
         </div>
         <div class="row summary">
-          <div class="col-md-10 col-md-offset-1">
-            <div class="text">
-              <i class="fas fa-chevron-right small-caret"></i>
-              <p>
-                Aenean nec tincidunt lacus. Aenean facilisis condimentum tellus
-                a maximus. Morbi leo eros, aliquam at tincidunt vitae, dictum
-                quis lacus. Morbi cursus et metus eget gravida. Sed sit amet
-                efficitur turpis. Phasellus suscipit elit sed orci tempus, a
-                interdum sem blandit. Quisque porta quam vitae pulvinar
-                hendrerit. Vivamus aliquet, diam in convallis iaculis, sem
-                lectus fringilla lacus, molestie maximus dui libero ut mi.
-                Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              </p>
-            </div>
+          <div class="col-md-8 col-md-offset-2">
+            <Content>{{"I love to code! Though I specialize in Web and Windows development, my interests encompass mobile, VR, AR, simulation, gaming, IoT, UI, UX, and graphic design. I have 7+ years of professional software development experience. I am proficient in several .NET and JavaScript application frameworks, object oriented programming, agile development, version control, application analysis, testing, technical writing, and relational database systems. I also have 2+ years of graphic and UI design experience."}}</Content>
           </div>
         </div>
       </div>
@@ -42,7 +30,11 @@
             </div>
           </template>
           <splide-slide v-for="project in projects" :key="project.name">
-            <img :src="getImgURL(project.logo)" v-bind:alt="project.logo" @click="showProject(project.id)" />
+            <img
+              :src="getImgURL(project.logo)"
+              v-bind:alt="project.logo"
+              @click="showProject(project.id)"
+            />
           </splide-slide>
         </splide>
       </div>
@@ -65,6 +57,7 @@
 <script>
 import Vue from "vue";
 import Navigation from "../components/Navigation.vue";
+import Content from "../components/Content.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import projects from "../data/projects.json";
@@ -83,7 +76,7 @@ let splideOptions = {
 
 export default Vue.extend({
   name: "Software",
-  components: { Splide, SplideSlide, Navigation },
+  components: { Splide, SplideSlide, Navigation, Content },
   data() {
     return {
       splideOptions,
@@ -96,7 +89,7 @@ export default Vue.extend({
     },
     showProject: function (projectID) {
       this.$router.push("/software-project/" + projectID);
-    }
+    },
   },
 });
 </script>
@@ -108,24 +101,8 @@ body {
 }
 
 .row {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.small-caret {
-  font-size: 28px;
-  height: 26px;
-  color: #ffff09;
-}
-
-.medium-caret {
-  font-size: 50px;
-  color: #ffff09;
-}
-
-.large-caret {
-  font-size: 112px;
-  color: #ffff09;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .splide__arrow {
@@ -151,15 +128,6 @@ body {
 
 } */
 
-.text {
-  display: flex;
-  align-items: center;
-}
-
-.text p {
-  margin: 0 0 0 15px;
-}
-
 .project-gallery {
   background-color: #120f0f;
   height: 320px;
@@ -169,6 +137,8 @@ body {
 .project-gallery img {
   height: 120px;
   cursor: pointer;
+  filter: grayscale(100%);
 }
+
 
 </style>

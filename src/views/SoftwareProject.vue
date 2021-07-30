@@ -40,19 +40,7 @@
             <h1>{{ project.name }}</h1>
           </div>
           <div class="row">
-            <div class="text">
-              <i class="fas fa-chevron-right small-caret"></i>
-              <p>
-                Aenean nec tincidunt lacus. Aenean facilisis condimentum tellus
-                a maximus. Morbi leo eros, aliquam at tincidunt vitae, dictum
-                quis lacus. Morbi cursus et metus eget gravida. Sed sit amet
-                efficitur turpis. Phasellus suscipit elit sed orci tempus, a
-                interdum sem blandit. Quisque porta quam vitae pulvinar
-                hendrerit. Vivamus aliquet, diam in convallis iaculis, sem
-                lectus fringilla lacus, molestie maximus dui libero ut mi.
-                Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              </p>
-            </div>
+            <Content>{{ project.summary }}</Content>
           </div>
         </div>
       </div>
@@ -62,6 +50,7 @@
 
 <script>
 import Vue from "vue";
+import Content from "../components/Content.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import projects from "../data/projects.json";
@@ -83,7 +72,7 @@ export default Vue.extend({
   props: {
     id: { type: String },
   },
-  components: { Splide, SplideSlide },
+  components: { Splide, SplideSlide, Content },
   data() {
     return {
       splideOptions,
@@ -123,33 +112,8 @@ body {
   margin-bottom: 30px;
 }
 
-.small-caret {
-  font-size: 28px;
-  height: 26px;
-  color: #ffff09;
-}
-
-.medium-caret {
-  font-size: 50px;
-  color: #ffff09;
-}
-
-.large-caret {
-  font-size: 112px;
-  color: #ffff09;
-}
-
 .splide__arrow {
   background: none;
-}
-
-.text {
-  display: flex;
-  align-items: center;
-}
-
-.text p {
-  margin: 0 0 0 15px;
 }
 
 .software-project {

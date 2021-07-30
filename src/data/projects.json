@@ -7,12 +7,14 @@
             "resimp-search-1.png",
             "resimp-search-2.png",
             "resimp-search-3.png"
-        ]
+        ],
+        "summary": "Resimplifi is a Multiple Listing Service for commercial real estate. As lead engineer on this project, I was responsible for all software solutions: from our back-end data services to our public-facing webpages. Specific challenges included authentication, image processing, and spatial data visualization. My team navigated some very tight deadlines to deliver a product I am extremely proud of. \n I utilized many modern web development tools and technologies: ReactJS, NodeJS, ExpressJS, PostgreSQL, Redux, Sass, Webpack, ES6, and Azure"
     },
     {
         "id": "ncr",
         "name": "NCR",
-        "logo": "logo-rcn.png"
+        "logo": "logo-rcn.png",
+        "summary": "At NCR, I managed a team of 7 Software Engineers. I lead team standups, retros, and refinement sessions. I participated in interviews. And I mentored team members and evaluated their performance. \n\nI was also the technical lead on our team. I created the technical specifications for development tasks. I was responsible for PI planning, a large research initiative to map out all new features for an entire quarter. I identified and mitigated all extra team dependencies and blockers. I was the point man for technical questions. And I played a critical role in our team's QA and peer review process; I reviewed at least 90% of all pull requests. \n\nOn top of my leadership and research responsibilities, I also contributed a fair amount of code as well. I owned some of the more challenging development tasks on my team. At NCR, I furthered my proficiency in React and NodeJS, and I gained proficiency in TypeScript, Java, Spring Boot, Cypress, and Jest. \n\nMy team helped build NCR's next generation point of sale product. We replaced an old .NET client application with React. We built a BFF server (NestJS) to broker communication between the client and back-end server, transforming large and awkward XML payloads into smaller, more intuitive JSON contracts. And we built a Spring Boot server to broker communication between the client and an array of devices: printers, scanners, scales, and PIN pads."
     },
     {
         "id": "pjm",
@@ -22,11 +24,13 @@
     {
         "id": "myfoodstand",
         "name": "My Food Stand",
-        "logo": "logo-myfoodstand.png"
+        "logo": "logo-myfoodstand.png", 
+        "summary": "I founded, designed, and built myfoodstand.com, a site dedicated to improving the transparency and sustainability of the Minneapolis food system. This experience brought a greater command of the .NET stack (ASP.NET MVC, SQL Server, LINQ-to-Entity). I also became proficient in UI design (Adobe Photoshop, GIMP)."
     },
     {
         "id": "itm",
         "name": "ITM Twentyfirst",
-        "logo": "logo-mti.png"
+        "logo": "logo-mti.png",
+        "summary": "At ITM Twentyfirst, I helped build and maintain Connect, ITM’s complex and evolving enterprise application. I became proficient in Agile methodology and tools (Git, Jira). I managed large and complex data sets. I wrote advanced queries and stored procedures. I modified columns and table relationships to reflect evolving business logic. I observed best practices around normalization and security. I replaced older technologies (Silverlight, VB.NET, jQuery) with new (KnockoutJS, AngularJS, SignalR, Bootstrap)."
     }
 ]

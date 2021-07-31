@@ -35,12 +35,15 @@ const routes: Array<RouteConfig> = [
     name: "VR and AR",
     // route level code-splitting
     component: () =>
-      import(/* webpackChunkName: "design" */ "../views/VR.vue"),
+      import(/* webpackChunkName: "design" */ "../views/vr/VR.vue"),
   }
 ];
 
 const router = new VueRouter({
   routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  }
 });
 
 export default router;

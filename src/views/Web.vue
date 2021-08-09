@@ -1,6 +1,6 @@
 
 <template>
-  <div class="software">
+  <div class="web">
     <Navigation />
     <div class="container-fluid intro">
       <div class="container">
@@ -75,7 +75,7 @@ let splideOptions = {
 };
 
 export default Vue.extend({
-  name: "Software",
+  name: "Web",
   components: { Splide, SplideSlide, Navigation, Content },
   data() {
     return {
@@ -88,17 +88,14 @@ export default Vue.extend({
       return require("../assets/" + pic);
     },
     showProject: function (projectID) {
-      this.$router.push("/software-project/" + projectID);
+      this.$router.push("/web-app/" + projectID);
     },
   },
 });
 </script>
 
 <style scoped>
-body {
-  font-family: "Quicksand", sans-serif;
-  color: #120f0f;
-}
+
 
 .row {
   margin-top: 150px;
@@ -109,9 +106,10 @@ body {
   background: none;
 }
 
-/* .software {
-
-} */
+.web {
+  font-family: "Quicksand", sans-serif;
+  color: #120f0f;
+}
 
 .title {
   display: flex;

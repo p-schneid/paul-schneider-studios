@@ -336,10 +336,11 @@
   </div>
 </template>
 
+<style scoped src="./VR.css"/>
+
 <script>
 import Vue from "vue";
 import Navigation from "@/components/Navigation.vue";
-import "./VR.css";
 
 export default Vue.extend({
   name: "VR",

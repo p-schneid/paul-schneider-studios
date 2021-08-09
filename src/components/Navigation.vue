@@ -18,7 +18,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><router-link to="/software">Software</router-link></li>
+            <li><router-link to="/web">Web</router-link></li>
             <li><router-link to="/design">Graphic Design</router-link></li>
             <li><router-link to="/vr">VR + AR</router-link></li>
           </ul>

@@ -1,27 +1,27 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Software from "../views/Software.vue";
+import Web from "../views/Web.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Software",
-    component: Software,
+    name: "Web Development",
+    component: Web,
   },
   {
-    path: "/software",
-    name: "Software",
-    component: Software
+    path: "/web",
+    name: "Web Development",
+    component: Web
   },
   {
-    path: "/software-project/:id",
-    name: "Software Project",
+    path: "/web-app/:id",
+    name: "Web App",
     props: true,
     // route level code-splitting
     component: () =>
-      import(/* webpackChunkName: "software" */ "../views/SoftwareProject.vue"),
+      import(/* webpackChunkName: "web-app" */ "../views/WebApp.vue"),
   },
   {
     path: "/design",

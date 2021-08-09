@@ -1,14 +1,13 @@
 <template>
-  <div class="software-project" @click="close">
+  <div class="web-app" @click="close">
     <div class="content-panel container" @click="onPanelClick">
       <div class="close-btn">
         <i class="fas fa-times" @click="close"></i>
       </div>
       <div class="asset-gallery">
-        <div v-if="project.images">
-          <splide :options="splideOptions" :slides="project.images">
+          <splide :options="splideOptions">
             <template v-slot:controls>
-              <div class="splide__arrows">
+              <div class="splide__arrows" :style="assets.length < 2 && {display: 'none'}" >
                 <div class="splide__arrow splide__arrow--prev">
                   <i class="fas fa-caret-left medium-caret"></i>
                 </div>
@@ -17,22 +16,16 @@
                 </div>
               </div>
             </template>
-            <splide-slide v-for="image in project.images" :key="image">
-              <img
-                class="screen-shot"
-                :src="getImgURL(image)"
-                v-bind:alt="image"
-              />
+            <splide-slide v-for="asset in assets" :key="asset">
+              <div class="app-asset">
+                <img
+                  class="img-responsive"
+                  :src="getImgURL(asset)"
+                  :alt="asset"
+                />
+              </div>
             </splide-slide>
           </splide>
-        </div>
-        <div v-else>
-          <img
-            class="logo"
-            :src="getImgURL(project.logo)"
-            v-bind:alt="project.logo"
-          />
-        </div>
       </div>
       <div class="project-details">
         <div class="container-fluid">
@@ -57,7 +50,6 @@ import projects from "../data/projects.json";
 
 let splideOptions = {
   type: "loop",
-  gap: "100px",
   autoWidth: true,
   focus: "center",
   pagination: false,
@@ -68,16 +60,11 @@ let splideOptions = {
 };
 
 export default Vue.extend({
-  name: "SoftwareProject",
+  name: "WebApp",
   props: {
     id: { type: String },
   },
   components: { Splide, SplideSlide, Content },
-  data() {
-    return {
-      splideOptions,
-    };
-  },
   computed: {
     project: function () {
       let id = this.id;
@@ -86,13 +73,25 @@ export default Vue.extend({
       });
       return project;
     },
+    assets: function () {
+      let assets = [this.project.logo, ...this.project.images];
+      return assets;
+    },
+    splideOptions: function () {
+      let options = {...splideOptions};
+      if (this.assets.length < 2) {
+        options.type = "slide";
+      }
+      return options;
+    },
+    
   },
   methods: {
     getImgURL: function (pic) {
       return require("../assets/" + pic);
     },
     close: function () {
-      this.$router.push("/software");
+      this.$router.push("/web");
     },
     onPanelClick: function (event) {
       event.stopPropagation();
@@ -102,10 +101,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-body {
-  font-family: "Quicksand", sans-serif;
-  color: #120f0f;
-}
 
 .row {
   margin-top: 30px;
@@ -116,10 +111,12 @@ body {
   background: none;
 }
 
-.software-project {
+.web-app {
   background: #8d8c8c;
   padding: 50px 0;
   cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  color: #120f0f;
 }
 
 .content-panel {
@@ -156,18 +153,15 @@ body {
 
 .asset-gallery li {
   padding: 50px 25px;
+  display: flex;
 }
 
-.asset-gallery .screen-shot {
+.asset-gallery .app-asset {
   max-width: 80vw;
   width: 700px;
-}
-
-.asset-gallery .logo {
-  display: block;
-  height: 300px;
-  padding: 50px 0;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 .project-details {

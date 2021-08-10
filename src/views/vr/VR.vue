@@ -25,10 +25,274 @@
       </div>
     </header>
 
-    <main class="pyrus-burns content">
+    <main class="content">
+      <!-- Solo EP -->
+
+      <section class="solo-ep">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-sm-push-3">
+              <div class="description">
+                <div class="title">
+                  <h1>SoloEP</h1>
+                  <h3>
+                    Microsoft HoloLens . HTC Vive . Unity . A-Frame . GIMP
+                  </h3>
+                  <h4>UI Designer . UX Designer</h4>
+                  <h2>Pyrus Medical</h2>
+                </div>
+
+                <p>
+                  Electrophysiologists are inundated with information in the
+                  operating room. They must interpret EKGs, ultrasounds, X-Rays
+                  - thousands of data points from half a dozen video feeds. And
+                  they have to rely on several assistants to manage and
+                  manipulate this constant stream of information. We built
+                  SoloEP to return control to the physician. Using a HMD, the EP
+                  can directly manage these visual displays by gazing,
+                  gesturing, and speaking. I lead the UI and UX design on this
+                  project.
+                </p>
+
+                <div class="image">
+                  <img
+                    class="img-responsive blue-border"
+                    src="@/assets/solo-ep.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="detail-border detail-top-border">
+              <label @click="toggleSoloEPDetails">{{
+                isSoloEPDetailsVisible ? "See Less" : "See More!"
+              }}</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail container-fluid">
+          <div
+            :class="
+              isSoloEPDetailsVisible
+                ? 'dynamic-details expanded-details'
+                : 'dynamic-details'
+            "
+          >
+            <div class="row details">
+              <div class="col-xs-12 col-sm-6 col-sm-push-3">
+                <h3>UI and UX Design</h3>
+
+                <p><b>Navigation</b></p>
+
+                <p>
+                  Electrophysiologists will use SoloEP to navigate between video
+                  displays and interact with their content. Navigating between
+                  displays is the single most important use case. It was
+                  critical we nailed the user interface and the user experience.
+                  From the outset, there were a couple obvious limitations.
+                </p>
+
+                <p>
+                  <b>Limited field of view and pixel density</b><br />
+                  Both the Microsoft HoloLens and the HTC Vive have constraining
+                  FOVs and PPIs. This is problematic if you need to view large
+                  videos in fine detail. If the video is too small and too far
+                  away, fine detail becomes imperceptible. Too large and too
+                  close, and the video will be clipped by the FOV. At the
+                  correct size and distance, the video should fit just inside
+                  the FOV.
+                </p>
+
+                <p>
+                  <b>A simple interaction model</b><br />As the physician must
+                  maintain absolute focus on the operation, we have to limit the
+                  interface to a few, simple interactions. They can't waste time
+                  fumbling through long menu systems or busy toolbars. All video
+                  feeds must be easily and quickly accessible.
+                </p>
+
+                <div class="image narrow">
+                  <img
+                    class="img-responsive blue-border"
+                    src="@/assets/solo-ep-static-layout.jpg"
+                  />
+                </div>
+
+                <p>
+                  I first came up with this Full Screen layout. All the displays
+                  are visible. They all have the proper dimensions. The
+                  physician must simply look around to navigate between the
+                  displays. Very quick and intuitive. After closer inspection
+                  though, I realized I was overlooking two other important
+                  requirements.
+                </p>
+
+                <p>
+                  <b>The UI must scale</b><br />
+                  In reality, the EP would need to access more than the seven
+                  displays in my sketch. As you add more video displays, it
+                  becomes more cumbersome to find the correct one.
+                </p>
+
+                <p>
+                  <b>The UI must be compact</b><br />As you add more video
+                  displays, the content area becomes taller and wider, and the
+                  distance between displays becomes greater. Because the
+                  Electrophysiologist is immobilized at the patient's bed side,
+                  a large UI is impractical. The EP can't shuffle their feet and
+                  turn to another display every few seconds. Its possible they
+                  could strain their back and neck to glance between videos, but
+                  this would be very uncomfortable during a four hour procedure.
+                  The UI should be as compact as possible.
+                </p>
+
+                <div class="image narrow">
+                  <img
+                    class="img-responsive blue-border"
+                    src="@/assets/solo-ep-fluid-layout.jpg"
+                  />
+                </div>
+
+                <p>
+                  I finally settled on this Fluid layout. A single display
+                  occupies the center of the physician's FOV, at optimal size
+                  and distance. Smaller displays are arrayed along the
+                  perimeter, just outside the viewing frustums. These are not
+                  for viewing and interacting; rather, they serve as preview
+                  icons to help the physician navigate between displays. To view
+                  a new video, the EP need only select it's preview icon on the
+                  periphery. The new video now streams in the central display.
+                  All the displays are still visible and readily accessible.
+                  Nothing is hidden behind menus or buttons or even text. It
+                  scales. And it's organized - all displays are anchored to a
+                  specific point in space allowing the physician to quickly
+                  recall their location. The following storyboard illustrates
+                  the user's experience.
+                </p>
+
+                <div class="image-gallery blue-bg">
+                  <div class="legend row">
+                    <div class="legend-entry selected col-xs-4">
+                      <strong>Select</strong> <span>&nbsp;</span>
+                    </div>
+                    <div class="legend-entry hover col-xs-4">
+                      <strong>Hover</strong> <span>&nbsp;</span>
+                    </div>
+                    <div class="legend-entry fov col-xs-4">
+                      <strong>FOV</strong> <span>&nbsp;</span>
+                    </div>
+                  </div>
+                  <img
+                    class="img-responsive"
+                    src="@/assets/gaze-at-fluro.jpg"
+                  />
+                  <p>[GAZE] at CARTO preview</p>
+                  <img
+                    class="img-responsive"
+                    src="@/assets/gaze-at-carto-preset.jpg"
+                  />
+                  <p>[SELECT] CARTO preview</p>
+                  <img
+                    class="img-responsive"
+                    src="@/assets/select-carto-preset.jpg"
+                  />
+                  <p>[GAZE] at CARTO</p>
+                  <img
+                    class="img-responsive"
+                    src="@/assets/gaze-at-carto.jpg"
+                  />
+                </div>
+
+                <p><b>Rotation</b></p>
+
+                <p>
+                  During a procedure, the Electrophysiologist relies heavily on
+                  CARTO, an electroanatomical mapping system that models the
+                  patient's heart. The EP must inspect this heart model from
+                  many different perspectives. Unfortunately, the physician
+                  can't rotate this model directly - they depend on their
+                  assistants to adjust the heart's orientation for them. This is
+                  a huge pain point. Their assistants must interpret "rotate
+                  back five degrees" and "turn right a smidge". You can imagine
+                  the confusion and frustration.
+                </p>
+
+                <p>
+                  We had to give the physician direct control. This was a
+                  difficult challenge. The EP must make very fine adjustments.
+                  They need the precision of a mouse or trackpad. Unfortunately,
+                  the EP's hands are occupied with instruments.
+                </p>
+
+                <p>
+                  To meet these challenges, I developed a head tilt mechanism to
+                  rotate the heart. It’s pretty simple. The physician's head
+                  acts as a joystick. Our hardware can detect very fine head
+                  movements, similar to what you might find on a console
+                  joystick. This control mechanism is quite intuitive. Because
+                  the head can pitch and roll and turn, these rotations
+                  translate quite nicely when rotating a model heart. I
+                  developed the following prototype as a proof-of-concept.
+                  Originally developed for Unity + HoloLens, I recreated it in
+                  A-Frame to share here. Put on an HMD and check it out!
+                </p>
+
+                <div class="image">
+                  <a href="../tilt"
+                    ><img
+                      class="img-responsive blue-border tilt-control-gif"
+                      src="@/assets/tilt-control.gif"
+                  /></a>
+                </div>
+
+                <p>
+                  Finally, here is a storyboard for the entire rotation
+                  sequence.
+                </p>
+
+                <div class="image-gallery blue-bg">
+                  <div class="legend row">
+                    <div class="legend-entry selected col-xs-4">
+                      <strong>Select</strong> <span>&nbsp;</span>
+                    </div>
+                    <div class="legend-entry hover col-xs-4">
+                      <strong>Hover</strong> <span>&nbsp;</span>
+                    </div>
+                    <div class="legend-entry fov col-xs-4">
+                      <strong>FOV</strong> <span>&nbsp;</span>
+                    </div>
+                  </div>
+                  <img
+                    class="img-responsive"
+                    src="@/assets/gaze-at-carto.jpg"
+                  />
+                  <p>[SELECT] CARTO</p>
+                  <img class="img-responsive" src="@/assets/select-carto.jpg" />
+                  <p>[SELECT] 'Rotate Heart'</p>
+                  <img
+                    class="img-responsive"
+                    src="@/assets/start-rotate-carto.jpg"
+                  />
+                  <p>[TILT] head</p>
+                  <img class="img-responsive" src="@/assets/rotate-carto.jpg" />
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="row">
+              <div class="detail-border detail-bottom-border">
+                <label @click="toggleSoloEPDetails">See Less</label>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
       <!-- Pyrus Burns -->
 
-      <section>
+      <section class="pyrus-burns">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-push-3">
@@ -63,9 +327,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="detail container-fluid">
           <div class="row">
             <div class="detail-border detail-top-border">
               <label @click="toggleBurnDetails">{{
@@ -73,9 +334,17 @@
               }}</label>
             </div>
           </div>
+        </div>
 
-          <div class="row">
-            <div :class="classesBurnDetails">
+        <div class="detail container-fluid">
+          <div
+            :class="
+              isBurnDetailsVisible
+                ? 'dynamic-details expanded-details'
+                : 'dynamic-details'
+            "
+          >
+            <div class="row">
               <div class="col-xs-12 col-sm-6 col-sm-push-3">
                 <h3>UI Development</h3>
 
@@ -224,12 +493,12 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div :class="classesBurnBottomBorder">
+            <!-- <div class="row">
+              <div class="detail-border detail-bottom-border">
                 <label @click="toggleBurnDetails">See Less</label>
-            </div>
+              </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -348,11 +617,15 @@ export default Vue.extend({
   data: function () {
     return {
       isBurnDetailsVisible: false,
+      isSoloEPDetailsVisible: false,
     };
   },
   methods: {
     toggleBurnDetails: function () {
       this.isBurnDetailsVisible = !this.isBurnDetailsVisible;
+    },
+    toggleSoloEPDetails: function () {
+      this.isSoloEPDetailsVisible = !this.isSoloEPDetailsVisible;
     },
   },
   computed: {
@@ -367,7 +640,7 @@ export default Vue.extend({
         ? "expanded-border"
         : "collapsed-border";
       return "detail-border detail-bottom-border " + transitionClass;
-    }
+    },
   },
 });
 </script>

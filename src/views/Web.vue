@@ -10,7 +10,22 @@
         </div>
         <div class="row summary">
           <div class="col-md-8 col-md-offset-2">
-            <Content>{{"I love to code! Though I specialize in Web and Windows development, my interests encompass mobile, VR, AR, simulation, gaming, IoT, UI, UX, and graphic design. I have 7+ years of professional software development experience. I am proficient in several .NET and JavaScript application frameworks, object oriented programming, agile development, version control, application analysis, testing, technical writing, and relational database systems. I also have 2+ years of graphic and UI design experience."}}</Content>
+            <Content
+              >{{
+                `Howdy! Thanks for checking out my web development portfolio. 
+                I make responsive web pages using modern technologies.\n\nI have 
+                been writing websites for over 10 years. In that time, I’ve 
+                been involved in dozens of projects, big and small. I’ve worked 
+                on complex enterprise platforms with large, agile, and 
+                multidisciplinary teams. I’ve also built my own sites from scratch, 
+                owning the entire application lifecycle. I can coordinate 
+                effectively with all project stakeholders: product managers, 
+                designers, business analysts, architects, QAs, and clients. I am 
+                adept at translating requirements into quality products. I excel at 
+                building and managing client relationships. And I love solving 
+                problems! Explore some of my projects below.`
+              }}
+            </Content>
           </div>
         </div>
       </div>
@@ -95,8 +110,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
-
 .row {
   margin-top: 150px;
   margin-bottom: 150px;
@@ -137,6 +150,4 @@ export default Vue.extend({
   cursor: pointer;
   filter: grayscale(100%);
 }
-
-
 </style>

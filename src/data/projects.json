@@ -8,7 +8,7 @@
             "resimp-search-2.png",
             "resimp-search-3.png"
         ],
-        "summary": "Resimplifi is a Multiple Listing Service for commercial real estate. As lead engineer on this project, I was responsible for all software solutions: from our back-end data services to our public-facing webpages. Specific challenges included authentication, image processing, and spatial data visualization. My team navigated some very tight deadlines to deliver a product I am extremely proud of. \n I utilized many modern web development tools and technologies: ReactJS, NodeJS, ExpressJS, PostgreSQL, Redux, Sass, Webpack, ES6, and Azure"
+        "summary": "Resimplifi is a Multiple Listing Service for commercial real estate. As lead engineer on this project, I was responsible for all software solutions: from our back-end data services to our public-facing webpages. Specific challenges included authentication, image processing, and spatial data visualization. My team navigated some very tight deadlines to deliver a product I am extremely proud of. \n\nI utilized many modern web development tools and technologies: ReactJS, NodeJS, ExpressJS, PostgreSQL, Redux, Sass, Webpack, ES6, and Azure"
     },
     {
         "id": "ncr",

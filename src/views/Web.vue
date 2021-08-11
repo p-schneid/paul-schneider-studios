@@ -12,18 +12,17 @@
           <div class="col-md-8 col-md-offset-2">
             <Content
               >{{
-                `Howdy! Thanks for checking out my web development portfolio. 
-                I make responsive web pages using modern technologies.\n\nI have 
+                `I make responsive web pages using modern technologies. I have 
                 been writing websites for over 10 years. In that time, I’ve 
                 been involved in dozens of projects, big and small. I’ve worked 
-                on complex enterprise platforms with large, agile, and 
-                multidisciplinary teams. I’ve also built my own sites from scratch, 
+                on complex enterprise platforms with large, agile teams. 
+                I’ve also built my own sites from scratch, 
                 owning the entire application lifecycle. I can coordinate 
                 effectively with all project stakeholders: product managers, 
                 designers, business analysts, architects, QAs, and clients. I am 
-                adept at translating requirements into quality products. I excel at 
-                building and managing client relationships. And I love solving 
-                problems! Explore some of my projects below.`
+                adept at translating requirements into quality features and products. 
+                I excel at building and managing client relationships. 
+                And I love solving problems! Explore some of my projects below.`
               }}
             </Content>
           </div>

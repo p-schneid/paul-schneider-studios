@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row title">
           <h1>Web Application Development</h1>
-          <i class="fas fa-chevron-left large-caret"></i>
+          <i class="fas fa-angle-left large-caret"></i>
         </div>
         <div class="row summary">
           <div class="col-md-8 col-md-offset-2">
@@ -58,9 +58,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-lg-offset-2">
-            <i class="fas fa-chevron-right large-caret"></i>
-            <i class="fas fa-chevron-right large-caret"></i>
-            <i class="fas fa-chevron-right large-caret"></i>
+            <i class="fas fa-angle-right large-caret"></i>
+            <i class="fas fa-angle-right large-caret"></i>
+            <i class="fas fa-angle-right large-caret"></i>
           </div>
         </div>
       </div>

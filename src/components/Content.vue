@@ -1,6 +1,6 @@
 <template>
   <div class="text">
-    <i class="fas fa-chevron-down medium-caret"></i>
+    <i class="fas fa-angle-down medium-caret"></i>
     <p>
       <slot>...</slot>
     </p>

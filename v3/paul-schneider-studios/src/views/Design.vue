@@ -196,7 +196,7 @@
 <style scoped>
 
 .logo {
-    margin-top: 20%;
+    margin-top: 50%;
     margin-bottom: 150px;
 }
 

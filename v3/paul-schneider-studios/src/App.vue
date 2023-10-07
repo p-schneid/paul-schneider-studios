@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <span class="icon-bar"></span>
           </button>
           <span class="navbar-brand">
-            <img alt="Paul Schneider" src="./assets/logo-nav.png">
+            <img alt="PS" src="./assets/logo-nav.png">
           </span>
         </div>
     
@@ -24,26 +24,11 @@ import { RouterLink, RouterView } from 'vue-router'
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><RouterLink to="/web">Web</RouterLink></li> -->
             <li><RouterLink to="/design">Graphic Design</RouterLink></li>
-            <li><RouterLink to="/design">Graphic Design</RouterLink></li>
-            <!-- <li><RouterLink to="/vr">VR + AR</RouterLink></li> -->
+            <li><RouterLink to="/vr">VR + AR</RouterLink></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->
 
   <RouterView />
 </template>
@@ -96,10 +81,6 @@ nav a {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {

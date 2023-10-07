@@ -2,7 +2,7 @@
     
     <div class="portfolio">
       <!-- <Navigation /> -->
-      <div class="container ">
+      <div class="container cover">
         <div class="row">
           <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
             <img class="logo img-responsive" src="../assets/logo.png" >
@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <div class="container-fluid brand intro">
+      <div class="container-fluid brand intro cover">
         <div class="container">
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <div class="container-fluid brand voyaguer">
+      <div class="container-fluid brand voyaguer cover">
         <div class="container">
           <div class="row">
             <div class="col-md-5 col-md-offset-1">
@@ -67,7 +67,7 @@
         </div>
       </div>
 
-      <div class="container-fluid brand myfoodstand">
+      <div class="container-fluid brand myfoodstand cover">
           <div class="container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
@@ -147,7 +147,7 @@
 
     </div>
 
-    <div class="container-fluid brand sewersurfer">
+    <div class="container-fluid brand sewersurfer cover">
         <div class="container">
           
           <div class="row">
@@ -229,6 +229,10 @@
 .portfolio p {
     margin: 25px 0px;
     line-height: 27px;
+}
+
+.cover {
+  min-height: 100vh;
 }
 
 /* Desktop */

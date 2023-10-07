@@ -3,6 +3,35 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
+  <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container-fluid">
+        
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">
+            <img alt="Paul Schneider" src="./assets/logo-nav.png">
+          </span>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><RouterLink to="/web">Web</RouterLink></li> -->
+            <li><RouterLink to="/design">Graphic Design</RouterLink></li>
+            <li><RouterLink to="/design">Graphic Design</RouterLink></li>
+            <!-- <li><RouterLink to="/vr">VR + AR</RouterLink></li> -->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
   <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -20,25 +49,14 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+
+.navbar {
+    margin: 0 0 0 0;
 }
 
 .logo {
   display: block;
   margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-:root {
-  font-size: 16px;
 }
 
 #app {
@@ -62,23 +80,16 @@ nav {
   color: #ffff09;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
+nav a:hover {
   background-color: transparent;
 }
 
 nav a {
+  color: var(--color-text);
   display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  padding: 0.5rem 0 0.5rem 1rem;
 }
 
-nav a:first-of-type {
-  border: 0;
-}
 
 @media (min-width: 1024px) {
   header {
@@ -98,12 +109,13 @@ nav a:first-of-type {
   }
 
   nav {
-    text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
-
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+
+  nav a {
+    padding: 0.85rem 1rem 0 0;
   }
 }
 </style>

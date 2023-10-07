@@ -22,7 +22,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <!-- <li><RouterLink to="/web">Web</RouterLink></li> -->
+            <li><RouterLink to="/web">Web</RouterLink></li>
             <li><RouterLink to="/design">Graphic Design</RouterLink></li>
             <li><RouterLink to="/vr">VR + AR</RouterLink></li>
           </ul>
@@ -37,32 +37,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 .navbar {
     margin: 0 0 0 0;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
-}
-
-.small-caret {
-  font-size: 2rem;
-  color: #ffff09;
-}
-
-.medium-caret {
-  font-size: 3.25rem;
-  color: #ffff09;
-}
-
-.large-caret {
-  font-size: 6.25rem;
-  color: #ffff09;
 }
 
 nav a:hover {

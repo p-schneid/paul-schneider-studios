@@ -1,22 +1,53 @@
 
+<script setup>
+
+import Content from "../components/Content.vue";
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import projects from "../data/projects.json";
+import { useRouter } from "vue-router";
+
+const splideOptions = {
+  type: "loop",
+  gap: "100px",
+  autoWidth: true,
+  focus: "center",
+  pagination: false,
+  autoplay: true,
+  interval: 4000,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+};
+
+const router = useRouter()
+
+function getImgURL(pic) {
+  return new URL(`../assets/${pic}`, import.meta.url).href
+}
+    
+function showProject (projectID) {
+  router.push("/web-app/" + projectID);
+}
+
+</script>
+
 <template>
   <div class="web">
-    <Navigation />
     <div class="container-fluid intro">
       <div class="container">
         <div class="row title">
           <h1>Web Application Development</h1>
-          <i class="fas fa-angle-left large-caret"></i>
+          <img src="../assets/caret.png" />
         </div>
         <div class="row summary">
           <div class="col-md-8 col-md-offset-2">
             <Content
               >{{
                 `I make responsive web pages using modern technologies. I have 
-                been writing websites for over 10 years. In that time, I’ve 
-                been involved in dozens of projects, big and small. I’ve worked 
+                been writing websites for over 10 years. In that time, I've 
+                been involved in dozens of projects, big and small. I've worked 
                 on complex enterprise platforms with large, agile teams. 
-                I’ve also built my own sites from scratch, 
+                I've also built my own sites from scratch, 
                 owning the entire application lifecycle. I can coordinate 
                 effectively with all project stakeholders: product managers, 
                 designers, business analysts, architects, QAs, and clients. I am 
@@ -58,55 +89,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-lg-offset-2">
-            <i class="fas fa-angle-right large-caret"></i>
-            <i class="fas fa-angle-right large-caret"></i>
-            <i class="fas fa-angle-right large-caret"></i>
+            <img src="../assets/caret.png" class="right-caret" />
+            <img src="../assets/caret.png" class="right-caret"/>
+            <img src="../assets/caret.png" class="right-caret"/>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import Vue from "vue";
-import Navigation from "../components/Navigation.vue";
-import Content from "../components/Content.vue";
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import projects from "../data/projects.json";
-
-let splideOptions = {
-  type: "loop",
-  gap: "100px",
-  autoWidth: true,
-  focus: "center",
-  pagination: false,
-  autoplay: true,
-  interval: 4000,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-};
-
-export default Vue.extend({
-  name: "Web",
-  components: { Splide, SplideSlide, Navigation, Content },
-  data() {
-    return {
-      splideOptions,
-      projects,
-    };
-  },
-  methods: {
-    getImgURL: function (pic) {
-      return require("../assets/" + pic);
-    },
-    showProject: function (projectID) {
-      this.$router.push("/web-app/" + projectID);
-    },
-  },
-});
-</script>
 
 <style scoped>
 .row {
@@ -134,10 +125,6 @@ export default Vue.extend({
   max-width: 300px;
 }
 
-/* .summary {
-
-} */
-
 .project-gallery {
   background-color: #120f0f;
   height: 320px;
@@ -149,4 +136,9 @@ export default Vue.extend({
   cursor: pointer;
   filter: grayscale(100%);
 }
+
+.right-caret {
+  transform: rotate(180deg);
+}
+
 </style>

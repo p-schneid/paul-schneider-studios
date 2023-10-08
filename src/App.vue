@@ -1,30 +1,76 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
+
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container-fluid">
+        
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">
+            <img alt="PS" src="./assets/logo-nav.png">
+          </span>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><RouterLink to="/web">Web</RouterLink></li>
+            <li><RouterLink to="/design">Graphic Design</RouterLink></li>
+            <li><RouterLink to="/vr">VR + AR</RouterLink></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+  <RouterView />
 </template>
 
-<style>
+<style scoped>
 
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
+.navbar {
+    margin: 0 0 0 0;
 }
 
-.small-caret {
-  font-size: 2rem;
-  color: #ffff09;
+nav a:hover {
+  background-color: transparent;
 }
 
-.medium-caret {
-  font-size: 3.25rem;
-  color: #ffff09;
+nav a {
+  color: var(--color-text);
+  display: inline-block;
+  padding: 0.5rem 0 0.5rem 1rem;
 }
 
-.large-caret {
-  font-size: 6.25rem;
-  color: #ffff09;
-}
 
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    font-size: 1rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    padding: 0.85rem 1rem 0 0;
+  }
+}
 </style>

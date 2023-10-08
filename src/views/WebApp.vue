@@ -1,3 +1,69 @@
+
+<script setup>
+
+import Content from "../components/Content.vue";
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import projects from "../data/projects.json";
+import { ref, computed, onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router';
+
+const initialSplideOptions = {
+  type: "loop",
+  autoWidth: true,
+  focus: "center",
+  pagination: false,
+  autoplay: true,
+  interval: 4000,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+};
+
+  const router = useRouter();
+  const route = useRoute();
+
+  const id = ref(route.params.id);
+  
+  const project = computed(() => {
+    let project = projects.find((p) => {
+      return id.value === p.id;
+    });
+    return project;
+  })
+
+  const assets = computed(() => {
+    const p = project.value;
+    if (p) {
+      const assets = [p.logo, ...p.images];
+      return assets;
+    }
+    return [];
+  })
+
+  const splideOptions = computed(() => {
+    let options = {...initialSplideOptions};
+      if (assets.value.length < 2) {
+        options.type = "slide";
+      }
+      return options;
+  })
+  
+  function getImgURL(pic) {
+    return new URL(`../assets/${pic}`, import.meta.url).href
+  }
+
+  function close() {
+    router.push("/web");
+  }
+    
+  function onPanelClick(event) {
+    event.stopPropagation();
+  }
+
+
+</script>
+
+
 <template>
   <div class="web-app" @click="close">
     <div class="content-panel container" @click="onPanelClick">
@@ -30,75 +96,16 @@
       <div class="project-details">
         <div class="container-fluid">
           <div class="row">
-            <h1>{{ project.name }}</h1>
+            <h1>{{ project?.name }}</h1>
           </div>
           <div class="row">
-            <Content>{{ project.summary }}</Content>
+            <Content>{{ project?.summary }}</Content>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import Vue from "vue";
-import Content from "../components/Content.vue";
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import projects from "../data/projects.json";
-
-let splideOptions = {
-  type: "loop",
-  autoWidth: true,
-  focus: "center",
-  pagination: false,
-  autoplay: true,
-  interval: 4000,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-};
-
-export default Vue.extend({
-  name: "WebApp",
-  props: {
-    id: { type: String },
-  },
-  components: { Splide, SplideSlide, Content },
-  computed: {
-    project: function () {
-      let id = this.id;
-      let project = projects.find((p) => {
-        return id == p.id;
-      });
-      return project;
-    },
-    assets: function () {
-      let assets = [this.project.logo, ...this.project.images];
-      return assets;
-    },
-    splideOptions: function () {
-      let options = {...splideOptions};
-      if (this.assets.length < 2) {
-        options.type = "slide";
-      }
-      return options;
-    },
-    
-  },
-  methods: {
-    getImgURL: function (pic) {
-      return require("../assets/" + pic);
-    },
-    close: function () {
-      this.$router.push("/web");
-    },
-    onPanelClick: function (event) {
-      event.stopPropagation();
-    },
-  },
-});
-</script>
 
 <style scoped>
 

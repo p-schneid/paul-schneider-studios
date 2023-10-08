@@ -1,6 +1,39 @@
+<script setup>
+import { ref, computed } from 'vue'
+
+  const isBurnDetailsVisible = ref(false);
+  const isSoloEPDetailsVisible = ref(false);
+
+
+  function toggleBurnDetails () {
+    isBurnDetailsVisible.value = !isBurnDetailsVisible.value;
+  }
+
+  function toggleSoloEPDetails () {
+    isSoloEPDetailsVisible.value = !isSoloEPDetailsVisible.value;
+  }
+
+
+  const classesBurnDetails = computed(() => {
+    let transitionClass = isBurnDetailsVisible.value
+      ? "expanded-details"
+      : "collapsed-details";
+    return "details " + transitionClass;
+  }) 
+
+  const classesBurnBottomBorder =  computed(() => {
+    let transitionClass = this.isBurnDetailsVisible
+      ? "expanded-border"
+      : "collapsed-border";
+    return "detail-border detail-bottom-border " + transitionClass;
+  })
+
+</script>
+
+
+
 <template>
   <div class="vr">
-    <Navigation />
     <!-- pyramids -->
     <div class="vr-foreground">
       <img class="img-responsive" src="@/assets/vr-foreground.jpg" />
@@ -578,7 +611,7 @@
 
                 <p>
                   Too meet this challenge, I came up with a head tilt mechanism.
-                  It’s pretty simple. The physician's head acts as a joystick.
+                  It's pretty simple. The physician's head acts as a joystick.
                   Our hardware can detect very fine head movements, similar to
                   what you might find on a console joystick. This control
                   mechanism is quite intuitive; because the head can pitch and
@@ -607,40 +640,4 @@
 
 <style scoped src="./VR.css"/>
 
-<script>
-import Vue from "vue";
-import Navigation from "@/components/Navigation.vue";
 
-export default Vue.extend({
-  name: "VR",
-  components: { Navigation },
-  data: function () {
-    return {
-      isBurnDetailsVisible: false,
-      isSoloEPDetailsVisible: false,
-    };
-  },
-  methods: {
-    toggleBurnDetails: function () {
-      this.isBurnDetailsVisible = !this.isBurnDetailsVisible;
-    },
-    toggleSoloEPDetails: function () {
-      this.isSoloEPDetailsVisible = !this.isSoloEPDetailsVisible;
-    },
-  },
-  computed: {
-    classesBurnDetails: function () {
-      let transitionClass = this.isBurnDetailsVisible
-        ? "expanded-details"
-        : "collapsed-details";
-      return "details " + transitionClass;
-    },
-    classesBurnBottomBorder: function () {
-      let transitionClass = this.isBurnDetailsVisible
-        ? "expanded-border"
-        : "collapsed-border";
-      return "detail-border detail-bottom-border " + transitionClass;
-    },
-  },
-});
-</script>

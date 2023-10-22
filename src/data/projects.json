@@ -50,5 +50,15 @@
             "mti-connect.png"
         ],
         "summary": "At ITM Twentyfirst, I helped build and maintain Connect, ITM's complex and evolving enterprise application. I became proficient in Agile methodology and tools (Git, Jira). I managed large and complex data sets. I wrote advanced queries and stored procedures. I modified columns and table relationships to reflect evolving business logic. I observed best practices around normalization and security. I replaced older technologies (Silverlight, VB.NET, jQuery) with new (KnockoutJS, AngularJS, SignalR, Bootstrap)."
+    },
+    {
+        "id": "until",
+        "name": "Until",
+        "logo": "logo-mti.png",
+        "images": [
+            "mti-home.png",
+            "mti-connect.png"
+        ],
+        "summary": "In 2021, I joined Until, a health and wellness company based in London. The product manager and I built the core of their booking application from scratch in about four months. I was really proud of the booking experience we designed and built, particularly the timeline component I created. It's a powerful tool that manages dozens of states, inputs, and user interactions. {/n} From this core application, I added hundreds of new features to keep up with the companies rapidly evolving business model: subscriptions, ordering and payments, dashboards, and a door lock management solution. I gained proficiency in AWS infrastructure and server development technoligies. And I researched and planned our transition from a responsive web app to a universal application."
     }
 ]

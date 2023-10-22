@@ -40,6 +40,16 @@ const initialSplideOptions = {
     return [];
   })
 
+  const paragraphs = computed(() => {
+    const p = project.value;
+    if (p) {
+      const paragraphs = p.summary.split('{/n}')
+      console.log('paragraphs: ', paragraphs);
+      return paragraphs;
+    }
+    return [];
+  })
+
   const splideOptions = computed(() => {
     let options = {...initialSplideOptions};
       if (assets.value.length < 2) {
@@ -99,7 +109,11 @@ const initialSplideOptions = {
             <h1>{{ project?.name }}</h1>
           </div>
           <div class="row">
-            <Content>{{ project?.summary }}</Content>
+            <Content>
+              <p v-for="paragraph in paragraphs">
+                {{ paragraph }}
+              </p>
+            </Content>
           </div>
         </div>
       </div>

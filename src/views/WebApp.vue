@@ -59,7 +59,8 @@ const initialSplideOptions = {
   })
   
   function getImgURL(pic) {
-    return new URL(`../assets/${pic}`, import.meta.url).href
+    //return new URL(`/static/${pic}`, import.meta.url).href
+    return '/static/' + pic
   }
 
   function close() {

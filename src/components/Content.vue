@@ -3,7 +3,8 @@
 
 <template>
   <div class="text">
-    <img src="../assets/caret.png" />
+    <!-- <img src="/static/caret.png" /> -->
+    <img src="/static/caret.png" />
     <p>
       <slot>...</slot>
     </p>

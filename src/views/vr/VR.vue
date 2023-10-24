@@ -36,11 +36,11 @@ import { ref, computed } from 'vue'
   <div class="vr">
     <!-- pyramids -->
     <div class="vr-foreground">
-      <img class="img-responsive" src="@/assets/vr-foreground.jpg" />
+      <img class="img-responsive" src="/static/vr-foreground.jpg" />
     </div>
 
     <div class="vr-pyramids">
-      <img class="img-responsive" src="@/assets/vr-pyramids.png" />
+      <img class="img-responsive" src="/static/vr-pyramids.png" />
     </div>
 
     <header>
@@ -90,7 +90,7 @@ import { ref, computed } from 'vue'
                 <div class="image">
                   <img
                     class="img-responsive blue-border"
-                    src="@/assets/solo-ep.jpg"
+                    src="/static/solo-ep.jpg"
                   />
                 </div>
               </div>
@@ -149,7 +149,7 @@ import { ref, computed } from 'vue'
                 <div class="image narrow">
                   <img
                     class="img-responsive blue-border"
-                    src="@/assets/solo-ep-static-layout.jpg"
+                    src="/static/solo-ep-static-layout.jpg"
                   />
                 </div>
 
@@ -184,7 +184,7 @@ import { ref, computed } from 'vue'
                 <div class="image narrow">
                   <img
                     class="img-responsive blue-border"
-                    src="@/assets/solo-ep-fluid-layout.jpg"
+                    src="/static/solo-ep-fluid-layout.jpg"
                   />
                 </div>
 
@@ -219,22 +219,22 @@ import { ref, computed } from 'vue'
                   </div>
                   <img
                     class="img-responsive"
-                    src="@/assets/gaze-at-fluro.jpg"
+                    src="/static/gaze-at-fluro.jpg"
                   />
                   <p>[GAZE] at CARTO preview</p>
                   <img
                     class="img-responsive"
-                    src="@/assets/gaze-at-carto-preset.jpg"
+                    src="/static/gaze-at-carto-preset.jpg"
                   />
                   <p>[SELECT] CARTO preview</p>
                   <img
                     class="img-responsive"
-                    src="@/assets/select-carto-preset.jpg"
+                    src="/static/select-carto-preset.jpg"
                   />
                   <p>[GAZE] at CARTO</p>
                   <img
                     class="img-responsive"
-                    src="@/assets/gaze-at-carto.jpg"
+                    src="/static/gaze-at-carto.jpg"
                   />
                 </div>
 
@@ -276,7 +276,7 @@ import { ref, computed } from 'vue'
                   <a href="../tilt"
                     ><img
                       class="img-responsive blue-border tilt-control-gif"
-                      src="@/assets/tilt-control.gif"
+                      src="/static/tilt-control.gif"
                   /></a>
                 </div>
 
@@ -299,17 +299,17 @@ import { ref, computed } from 'vue'
                   </div>
                   <img
                     class="img-responsive"
-                    src="@/assets/gaze-at-carto.jpg"
+                    src="/static/gaze-at-carto.jpg"
                   />
                   <p>[SELECT] CARTO</p>
-                  <img class="img-responsive" src="@/assets/select-carto.jpg" />
+                  <img class="img-responsive" src="/static/select-carto.jpg" />
                   <p>[SELECT] 'Rotate Heart'</p>
                   <img
                     class="img-responsive"
-                    src="@/assets/start-rotate-carto.jpg"
+                    src="/static/start-rotate-carto.jpg"
                   />
                   <p>[TILT] head</p>
-                  <img class="img-responsive" src="@/assets/rotate-carto.jpg" />
+                  <img class="img-responsive" src="/static/rotate-carto.jpg" />
                 </div>
               </div>
             </div>
@@ -354,7 +354,7 @@ import { ref, computed } from 'vue'
                 <div class="image narrow">
                   <img
                     class="img-responsive blue-border"
-                    src="@/assets/pyrus-burns-demo.jpg"
+                    src="/static/pyrus-burns-demo.jpg"
                   />
                 </div>
               </div>
@@ -377,7 +377,7 @@ import { ref, computed } from 'vue'
                 : 'dynamic-details'
             "
           >
-            <div class="row">
+            <div class="row details">
               <div class="col-xs-12 col-sm-6 col-sm-push-3">
                 <h3>UI Development</h3>
 
@@ -403,14 +403,14 @@ import { ref, computed } from 'vue'
                 </p>
 
                 <div class="image-gallery blue-bg">
-                  <img class="img-responsive" src="@/assets/ui-start.jpg" />
+                  <img class="img-responsive" src="/static/ui-start.jpg" />
                   <img
                     class="img-responsive"
-                    src="@/assets/ui-calibrate-arm.jpg"
+                    src="/static/ui-calibrate-arm.jpg"
                   />
                   <img
                     class="img-responsive"
-                    src="@/assets/ui-calibrate-cube.jpg"
+                    src="/static/ui-calibrate-cube.jpg"
                   />
                 </div>
 
@@ -440,7 +440,7 @@ import { ref, computed } from 'vue'
                 <div class="image narrow">
                   <img
                     class="img-responsive blue-border"
-                    src="@/assets/qr-cube.jpg"
+                    src="/static/qr-cube.jpg"
                   />
                 </div>
 
@@ -478,7 +478,7 @@ import { ref, computed } from 'vue'
                   >
                     <video controls class="embed-responsive-item">
                       <source
-                        src="@/assets/pyrus-burns-arm-tracking-prototype.mp4"
+                        src="/static/pyrus-burns-arm-tracking-prototype.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -518,7 +518,7 @@ import { ref, computed } from 'vue'
                   >
                     <video controls class="embed-responsive-item">
                       <source
-                        src="@/assets/pyrus-burns-static-prototype.mp4"
+                        src="/static/pyrus-burns-static-prototype.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -569,7 +569,7 @@ import { ref, computed } from 'vue'
                   >
                     <video controls class="embed-responsive-item">
                       <source
-                        src="@/assets/parachute-sim.mp4"
+                        src="/static/parachute-sim.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -626,7 +626,7 @@ import { ref, computed } from 'vue'
                   <a href="@/tilt"
                     ><img
                       class="img-responsive blue-border tilt-control-gif"
-                      src="@/assets/tilt-control.gif"
+                      src="/static/tilt-control.gif"
                   /></a>
                 </div>
               </div>

@@ -5,7 +5,7 @@
       <div class="container cover">
         <div class="row">
           <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-            <img class="logo img-responsive" src="../assets/logo.png" >
+            <img class="logo img-responsive" src="/static/logo.png" >
           </div>
         </div>
       </div>
@@ -24,7 +24,7 @@
               <p>My approach to design is quite simple. Before I start any design or logo, I first ask myself, what ideas am I trying to communicate? I come up with a comprehensive list of themes I want my graphics to convey. They can be as tangable as "beer" or as subtle as "community". Second, I sketch designs that are complex enough to communicate as many of these themes as possible, but simple enough not to distract, confuse, or obfuscate. If not careful, these themes can drown eachother out. Finally, I use open source software to digitize my sketches. I use GIMP for raster images and Inkscape for vectors. </p>
             </div>
             <div class="col-md-4 col-md-offset-1">
-              <img class="logo-sketch img-responsive center-block" src="../assets/logo-sketch.png" >
+              <img class="logo-sketch img-responsive center-block" src="/static/logo-sketch.png" >
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@
               <p>Voyageur is bar with a bookstore. Its both your local watering whole and your favorite library. Patrons can browse the aisles while enjoying a beer. Or recline in an arm chair with Mark Twain and a cocktail. Above all, Voyageur sells an adventurous spirit. The walls are obscured by old maps of the frontier and sweeping landscape paintings. The bookshelves are filled with travel, history, historical fiction, and American classics. And this public house would be just that. It's heavy oak coffee tables and squashy up-cycled furniture would encourage patrons to stop, relax, and put their feet up. Voyageur is a proud resident of Duluth Minnesota. Here, thrill seekers eager to explore Minnesota's boundary waters swap stories with old salts, returning from their most recent voyage across the great lakes. And everyone would whet their spirits for their next adventure north, like the legendary voyageurs before them.</p>
             </div>
             <div class="col-md-4 col-md-offset-1 margin-top-md-80">
-              <img class="img-responsive center-block" src="../assets/voyaguer-logo.png" style="max-height: 400px;" > 
+              <img class="img-responsive center-block" src="/static/voyaguer-logo.png" style="max-height: 400px;" > 
             </div>
           </div>
           <div class="row">
@@ -47,7 +47,7 @@
               <p>bar, bookstore, adventure, history, minnesota history, nature, exploration, folk tales</p>
             </div>
             <div class="col-md-4 col-md-offset-1 margin-top-md-30" >
-              <img class="img-responsive center-block" src="../assets/voyaguer-header.png" style="max-height: 400px;" > 
+              <img class="img-responsive center-block" src="/static/voyaguer-header.png" style="max-height: 400px;" > 
             </div>
           </div>
           <div class="row">
@@ -56,12 +56,12 @@
               <p>First, I wanted the logo to express a romantic vision of adventure and exploration. Second, I wanted this vision to connect with Minnesota's history as a remote outpost on the American Frontier. Thirdly, I wanted this image to tell a folk tale, as tall as Paul Bunyan. This is how I conceived my intrepid voyageur, sailing across a starry sky. The voyageur is gazing upward, straining to glimpse the northern lights. The scene is inscribed by a border and lettering, a convention common in older logos. The Copperplate font underscores this theme. I chose the tag line very carefully. Tall Tales & Ales expresses several of the themes: bar, bookstore, folksy, community. Finally the compass points along the outside border emphasizes the spirit of exploration.</p>
             </div>
             <div class="col-md-4 col-md-offset-1 margin-top-md-80 hidden-sm hidden-xs">
-              <img class="img-responsive center-block" src="../assets/simple-voyaguer-logo.png" style="max-height: 400px;" > 
+              <img class="img-responsive center-block" src="/static/simple-voyaguer-logo.png" style="max-height: 400px;" > 
             </div>
           </div>
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              <img class="img-responsive center-block box-shadow" src="../assets/coasters.jpg">
+              <img class="img-responsive center-block box-shadow" src="/static/coasters.jpg">
             </div>
           </div>
         </div>
@@ -96,15 +96,15 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
                       <div class="item">
-                          <img src="../assets/myfoodstand-home.jpg" alt="Business Profile">
+                          <img src="/static/myfoodstand-home.jpg" alt="Business Profile">
                       </div>
                     
                       <div class="item active">
-                        <img src="../assets/myfoodstand-consumer-search.jpg" alt="Consumer Search">
+                        <img src="/static/myfoodstand-consumer-search.jpg" alt="Consumer Search">
                       </div>
                 
                       <div class="item">
-                        <img src="../assets/myfoodstand-consumer-index.jpg" alt="Consumer Tools">
+                        <img src="/static/myfoodstand-consumer-index.jpg" alt="Consumer Tools">
                       </div>
                   </div>
                 
@@ -136,7 +136,7 @@
               <div class="desktop" align="center">            
                 <div align="center" class="embed-responsive embed-responsive-16by9">
                     <video controls class="embed-responsive-item">
-                        <source src="../assets/myfoodstand-elevator-speech.mp4" type="video/mp4">
+                        <source src="/static/myfoodstand-elevator-speech.mp4" type="video/mp4">
                     </video>
                 </div>          
               </div>
@@ -152,7 +152,7 @@
           
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
-              <img class="img-responsive center-block" src="../assets/sewer-surfer-logo.png">
+              <img class="img-responsive center-block" src="/static/sewer-surfer-logo.png">
             </div>
           </div>
 
@@ -179,7 +179,7 @@
           
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              <img class="img-responsive center-block box-shadow" src="../assets/sewer-wall.jpg">
+              <img class="img-responsive center-block box-shadow" src="/static/sewer-wall.jpg">
             </div>
           </div>
 
@@ -202,7 +202,7 @@
 
 .matte {
 
-    background-image: url(/public/img/beige-cardstock.jpg); 
+    background-image: url("/static/beige-cardstock.jpg"); 
     padding: 5px;
     border-radius: 2px;  
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.85);*/
@@ -215,7 +215,7 @@
 .portfolio {
     font-family: sans-serif;
     color: #312f2f;
-    background: url("../assets/navy-cloth.jpg");
+    background: url("/static/navy-cloth.jpg");
 }
 
 .portfolio .row {
@@ -274,7 +274,7 @@
     width: 100%;
     height: 800px;
     max-height: 800px;
-    background-image: url('/public/img/desktop.png');
+    background-image: url('/static/desktop.png');
     background-repeat: no-repeat;
     background-size: contain;
 }

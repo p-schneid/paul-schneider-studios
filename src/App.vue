@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <span class="icon-bar"></span>
           </button>
           <span class="navbar-brand">
-            <img alt="PS" src="./assets/logo-nav.png">
+            <img alt="PS" src="/static/logo-nav.png">
           </span>
         </div>
     

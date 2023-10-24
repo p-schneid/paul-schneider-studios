@@ -22,7 +22,8 @@ const splideOptions = {
 const router = useRouter()
 
 function getImgURL(pic) {
-  return new URL(`../assets/${pic}`, import.meta.url).href
+  //return new URL(`/static/${pic}`, import.meta.url).href
+  return '/static/' + pic
 }
     
 function showProject (projectID) {
@@ -37,7 +38,7 @@ function showProject (projectID) {
       <div class="container">
         <div class="row title">
           <h1>Web Application Development</h1>
-          <img src="../assets/caret.png" />
+          <img src="/static/caret.png" />
         </div>
         <div class="row summary">
           <div class="col-md-8 col-md-offset-2">
@@ -89,9 +90,9 @@ function showProject (projectID) {
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-lg-offset-2">
-            <img src="../assets/caret.png" class="right-caret" />
-            <img src="../assets/caret.png" class="right-caret"/>
-            <img src="../assets/caret.png" class="right-caret"/>
+            <img src="/static/caret.png" class="right-caret" />
+            <img src="/static/caret.png" class="right-caret"/>
+            <img src="/static/caret.png" class="right-caret"/>
           </div>
         </div>
       </div>
